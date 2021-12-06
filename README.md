@@ -1,2 +1,2 @@
 # PA2
-PA2 is an external project of ANEA
+PA2 is an extension of ANEA project
