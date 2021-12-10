@@ -3,7 +3,35 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\input_balanced_new.csv">
+        <entry key="C:\Users\parha\OneDrive\Desktop\candidate_df_databases.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="C:\Users\parha\OneDrive\Desktop\candidate_df_processing.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="C:\Users\parha\OneDrive\Desktop\candidate_df_sortwaredev.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="C:\Users\parha\OneDrive\Desktop\candidate_df_travel.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\candidate_df.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

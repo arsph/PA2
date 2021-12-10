@@ -46,7 +46,7 @@ positives = positives.drop_duplicates()
 for i in range(len(positives)):
     r1, r2 = Generate_Rand_False(data)
     if( (r1 != r2) ):
-        if ( (((positives['term1'] == r1) & (positives['term2'] == r2)).any())  or
+        if ((((positives['term1'] == r1) & (positives['term2'] == r2)).any())  or
                 (((positives['term1'] == r2) & (positives['term2'] == r1)).any()) ):
             i-=1
             continue
