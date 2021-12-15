@@ -9,7 +9,7 @@ data = df
 # samples = 5
 # df = df.head(samples)
 
-def Generate_Rand_False(df):
+def generate_rand_false(df):
 
     row1_id, row2_id = random.sample(range(len(df)), 2)
 
@@ -37,6 +37,8 @@ for word in df['words']:
     print("Making positives - line: ", line,"/",len(data))
     terms = word.split(", ")
     for i in range(len(terms)-1):
+        if (i > 10):
+            break
         for j in range(i+1, len(terms)):
             positives.loc[row] = [terms[i], terms[j], 1]
             row+=1
@@ -44,22 +46,24 @@ for word in df['words']:
 positives = positives.drop_duplicates()
 
 for i in range(len(positives)):
-    r1, r2 = Generate_Rand_False(data)
+    r1, r2 = generate_rand_false(data)
     if( (r1 != r2) ):
         if ((((positives['term1'] == r1) & (positives['term2'] == r2)).any())  or
                 (((positives['term1'] == r2) & (positives['term2'] == r1)).any()) ):
             i-=1
             continue
         negatives.loc[i] = [r1, r2, 0]
-        if (i%2001 == 0):
-            print(i-1, "Negatives are discovered")
+        if (i%2001 == 1):
+            print(i, "iterates done.")
 
 
 print( "Negatives: ", len(negatives), "Positives: ",  len(positives), "are generated")
 
 frames = [positives, negatives]
 result = pd.concat(frames)
-result['FT_format'] = '__label__' + result['related'].astype(str)+' '+result['term1']+' '+result['term2']
-result = result.drop(['term1', 'term2', 'related'], axis = 1)
 
-np.savetxt('FastText_input.txt', result.FT_format, fmt='%s', delimiter=" ", header=" -- FASTTEXT INPUT FILE --")
+result.to_csv("fasttext_input_test.csv", sep=',', index=False)
+
+# result['ft_format'] = '__label__' + result['related'].astype(str)+' '+result['term1']+' '+result['term2']
+# result = result.drop(['term1', 'term2', 'related'], axis = 1)
+# np.savetxt('fasttext_input_test.txt', result.ft_format, fmt='%s', delimiter=" ", header=" -- FASTTEXT INPUT FILE --")
