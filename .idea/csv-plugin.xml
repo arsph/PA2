@@ -3,7 +3,14 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\candidate_df.csv">
+        <entry key="\fasttext_input_test.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\input_balanced.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

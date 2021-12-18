@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import random
 
-with open('candidate_df.csv', newline='') as csvfile:
-    df = pd.read_csv("candidate_df.csv")
+with open('candidate_df/candidate_df.csv', newline='') as csvfile:
+    df = pd.read_csv("candidate_df/candidate_df.csv")
 
 data = df
 # samples = 5
@@ -56,14 +56,12 @@ for i in range(len(positives)):
         if (i%2001 == 1):
             print(i, "iterates done.")
 
+negatives = negatives.drop_duplicates()
+positives = positives.sample(len(negatives))
 
 print( "Negatives: ", len(negatives), "Positives: ",  len(positives), "are generated")
 
 frames = [positives, negatives]
 result = pd.concat(frames)
 
-result.to_csv("fasttext_input_test.csv", sep=',', index=False)
-
-# result['ft_format'] = '__label__' + result['related'].astype(str)+' '+result['term1']+' '+result['term2']
-# result = result.drop(['term1', 'term2', 'related'], axis = 1)
-# np.savetxt('fasttext_input_test.txt', result.ft_format, fmt='%s', delimiter=" ", header=" -- FASTTEXT INPUT FILE --")
+result.to_csv("input_balanced.csv", sep=',', index=False)
