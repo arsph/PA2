@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from tensorflow.keras.layers import Dense, Dropout, LSTM
 from tensorflow.keras.models import Sequential
+from sklearn.model_selection import train_test_split
 
 warnings.filterwarnings('ignore')
 
@@ -28,14 +29,16 @@ vectors = np.arange(len(df)*600).reshape(len(df),600)
 for i in range(len(df)):
     vectors[i] = concatenate(df.loc[i]['term1'],df.loc[i]['term2'])
 
-x_training_data = vectors
-y_training_data = df['related']
+
+X_train, X_test, y_train, y_test = train_test_split(vectors, df['related'], test_size=0.3)
+# x_training_data = vectors
+# y_training_data = df['related']
 
 rnn = Sequential()
-rnn.add(LSTM(32, return_sequences = True, input_shape = (600,1)))
+rnn.add(LSTM(128, return_sequences = True, input_shape = (600,1)))
 rnn.add(Dropout(0.2))
-rnn.add(Dense(units = 1))
-rnn.compile(optimizer = 'adam', loss = 'mean_squared_error')
-rnn.fit(x_training_data, y_training_data, epochs = 4, batch_size = 64)
+rnn.add(Dense(units = 1, activation='sigmoid'))
+rnn.compile(optimizer = 'adam', loss = 'mean_squared_error', metrics=['accuracy'])
+rnn.fit(X_train, y_train, epochs = 2, batch_size = 128, validation_data=(X_test, y_test))
 rnn.save("model_binary")
 rnn.summary()

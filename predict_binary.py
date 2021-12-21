@@ -17,8 +17,11 @@ def concatenate(term1,term2):
 
 model = tf.keras.models.load_model('model_binary',compile = True)
 
-vector = np.zeros(shape=(1,600))
-vector = concatenate('Schulfahrt','Fahren')
-
+vector = concatenate('Staat','Schule')
+vector = vector.reshape(1,600)
+# print(vector)
+# print(vector.shape)
 # Check its architecture
-model.predict(vector)
+result = model.predict(vector)
+print(result.shape)
+print(result)
