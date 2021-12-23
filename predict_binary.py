@@ -15,13 +15,10 @@ def concatenate(term1,term2):
         word[i] = term2[i-300]
     return word
 
-model = tf.keras.models.load_model('model_binary',compile = True)
+model = tf.keras.models.load_model('model_binary_2',compile = True)
 
-vector = concatenate('Staat','Schule')
+vector = concatenate('Welt','Herr')
 vector = vector.reshape(1,600)
-# print(vector)
-# print(vector.shape)
-# Check its architecture
+
 result = model.predict(vector)
-print(result.shape)
 print(result)
