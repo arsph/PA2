@@ -31,7 +31,7 @@ for i in range(len(df)):
     vectors.append(concatenate(df.loc[i]['term1'],df.loc[i]['term2']))
 
 vectors = np.array(vectors)
-print(type(vectors),vectors.shape)
+# print(type(vectors),vectors.shape)
 X_train, X_test, y_train, y_test = train_test_split(vectors, df['related'], test_size=0.2)
 
 model = Sequential([
@@ -44,9 +44,9 @@ model = Sequential([
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
-model.fit(X_train, y_train, epochs=50, batch_size=1)
+model.fit(X_train, y_train, epochs=20, batch_size=16)
 test_loss, test_acc = model.evaluate(X_test, y_test)
 print('Test accuracy:', test_acc)
 
-model.save("model_binary_2")
+model.save("model_binary")
 model.summary()
