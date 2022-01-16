@@ -17,7 +17,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\candidate_df_with_scores.csv">
+        <entry key="\candidate_df\candidate_df_with_scores.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -39,13 +39,6 @@
           </value>
         </entry>
         <entry key="\input_balanced_with_labels.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\input_balanced_with_scores.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

@@ -18,7 +18,7 @@ def concatenate_with_label(term1,term2,l):
 
 model = tf.keras.models.load_model('model_binary_with_labels',compile = True)
 
-vector = concatenate_with_label('Arbeitgeber','Unternehmen','Gesellschaft')
+vector = concatenate_with_label('Schulbus','Reiseverkehrsmittel','Gerät')
 vector = vector.reshape(1,600)
 
 result = model.predict(vector)
