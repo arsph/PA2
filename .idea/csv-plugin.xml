@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\candidate_df\candidate_df_databases.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\candidate_df\candidate_df_sortwaredev.csv">
           <value>
             <Attribute>
@@ -18,6 +25,41 @@
           </value>
         </entry>
         <entry key="\candidate_df\candidate_df_with_scores.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\candidate_df\categorized_terms.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\candidate_df\categorized_terms_final.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\candidate_df\categorized_terms_final_with_scores.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\candidate_df\categorized_terms_from_scratch.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\candidate_df\categorized_terms_from_scratch_2.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

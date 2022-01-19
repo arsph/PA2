@@ -17,8 +17,8 @@ def concatenate(term1,term2):
 ft = fasttext.load_model('D:\cc.de.300.bin')
 model = tf.keras.models.load_model('model_binary',compile = True)
 
-with open('candidate_df/candidate_df.csv', newline='') as csvfile:
-    df = pd.read_csv("candidate_df/candidate_df.csv")
+with open('candidate_df/categorized_terms_final.csv', newline='') as csvfile:
+    df = pd.read_csv("candidate_df/categorized_terms_final.csv")
 
 data = df
 
@@ -44,4 +44,4 @@ for word in df['words']:
 df['scores'] = similarity_scores
 df = df.sort_values('scores', ascending=False)
 
-df.to_csv("candidate_df/candidate_df_with_scores.csv", sep=',', index=False)
+df.to_csv("candidate_df/categorized_terms_final_with_scores.csv", sep=',', index=False)
