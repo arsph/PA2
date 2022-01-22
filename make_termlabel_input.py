@@ -2,8 +2,10 @@ import pandas as pd
 import numpy as np
 import random
 
-with open('candidate_df/candidate_df.csv', newline='') as csvfile:
-    df = pd.read_csv("candidate_df/candidate_df.csv")
+path = 'Databases/candidate_df_databases.csv'
+
+with open(path, newline='') as csvfile:
+    df = pd.read_csv(path)
 
 data = df
 # samples = 5
@@ -67,4 +69,4 @@ print( "Negatives: ", len(negatives), "Positives: ",  len(positives), "are gener
 frames = [positives, negatives]
 result = pd.concat(frames)
 
-result.to_csv("input_balanced_with_labels.csv", sep=',', index=False)
+result.to_csv("Databases/input_terms_with_labels.csv", sep=',', index=False)

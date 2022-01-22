@@ -3,6 +3,34 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\Databases\candidate_df_databases.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Databases\input_balanced.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Databases\input_term_term.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Databases\input_terms_with_labels.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\candidate_df\candidate_df.csv">
           <value>
             <Attribute>
@@ -11,13 +39,6 @@
           </value>
         </entry>
         <entry key="\candidate_df\candidate_df_databases.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\candidate_df\candidate_df_sortwaredev.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -52,13 +73,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\candidate_df\categorized_terms_from_scratch.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\candidate_df\categorized_terms_from_scratch_2.csv">
           <value>
             <Attribute>
@@ -74,13 +88,6 @@
           </value>
         </entry>
         <entry key="\input_balanced.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\input_balanced_with_labels.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

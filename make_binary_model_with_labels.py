@@ -11,8 +11,10 @@ warnings.filterwarnings('ignore')
 
 ft = fasttext.load_model('D:\cc.de.300.bin')
 
-with open('input_balanced_with_labels.csv', newline='') as csvfile:
-    df = pd.read_csv("input_balanced_with_labels.csv")
+path = 'Databases/input_terms_with_labels.csv'
+
+with open(path, newline='') as csvfile:
+    df = pd.read_csv(path)
 
 def concatenate_with_label(term1,term2,l):
     term1 = ft.get_word_vector(term1)
@@ -49,5 +51,5 @@ model.fit(X_train, y_train, epochs=20, batch_size=16)
 test_loss, test_acc = model.evaluate(X_test, y_test)
 print('Test accuracy:', test_acc)
 
-model.save("model_binary_with_labels")
+model.save("Databases/model_binary_with_labels")
 model.summary()
