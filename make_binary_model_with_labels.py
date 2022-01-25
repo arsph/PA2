@@ -11,7 +11,7 @@ warnings.filterwarnings('ignore')
 
 ft = fasttext.load_model('D:\cc.de.300.bin')
 
-path = 'Databases/input_terms_with_labels.csv'
+path = 'Processing/input_terms_with_labels.csv'
 
 with open(path, newline='') as csvfile:
     df = pd.read_csv(path)
@@ -35,7 +35,7 @@ for i in range(len(df)):
 
 vectors = np.array(vectors)
 print(type(vectors),vectors.shape)
-X_train, X_test, y_train, y_test = train_test_split(vectors, df['related'], test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(vectors, df['related'], test_size=0.33)
 
 model = Sequential([
     keras.layers.Flatten(input_shape=(600,)),
@@ -47,9 +47,9 @@ model = Sequential([
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
-model.fit(X_train, y_train, epochs=20, batch_size=16)
+model.fit(X_train, y_train, epochs=24, batch_size=32)
 test_loss, test_acc = model.evaluate(X_test, y_test)
 print('Test accuracy:', test_acc)
 
-model.save("Databases/model_binary_with_labels")
+model.save("Processing/model_binary_with_labels")
 model.summary()

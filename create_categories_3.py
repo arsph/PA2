@@ -4,8 +4,8 @@ import fasttext
 import tensorflow as tf
 
 ft = fasttext.load_model('D:\cc.de.300.bin')
-model_binary = tf.keras.models.load_model('model_binary',compile = True)
-model_binary_with_labels = tf.keras.models.load_model('model_binary_with_labels',compile = True)
+model_binary = tf.keras.models.load_model('Processing/model_binary',compile = True)
+model_binary_with_labels = tf.keras.models.load_model('Processing/model_binary_with_labels',compile = True)
 
 def get_term_similarity(term1,term2):
     term1 = ft.get_word_vector(term1)
@@ -38,8 +38,8 @@ def get_term_with_label_similarity(term1,term2,l):
     result = result[0, 0]
     return result
 
-with open('candidate_df/candidate_df_with_scores.csv', newline='') as csvfile:
-    df = pd.read_csv("candidate_df/candidate_df_with_scores.csv")
+with open('Processing/candidate_df_processing_with_scores.csv', newline='') as csvfile:
+    df = pd.read_csv("Processing/candidate_df_processing_with_scores.csv")
 
 labels = df['labels']
 
@@ -50,32 +50,39 @@ for word in df['words']:
         uncategorized_terms.append(terms[i])
 uncategorized_terms = list(dict.fromkeys(uncategorized_terms))
 
-categorized_terms = pd.DataFrame(columns=['labels','word'])
+categorized_terms = pd.DataFrame(columns=['labels','words'])
 
+la = ""
 row = 0
-while(len(uncategorized_terms) > 0):
+while(len(uncategorized_terms) > 1):
     term1 = uncategorized_terms.pop(0)
     for i in range(len(uncategorized_terms)):
         term2 = uncategorized_terms[i]
-        max_sim = 0
-        best_label = ""
-        if (get_term_similarity(term1,term2) > 0.5):
+        result = get_term_similarity(term1,term2)
+        if((result > 0.5)  and (term1 != term2)):
+            # max_similarity = 0.5
+            la = ""
             for l in labels:
-                sim = get_term_with_label_similarity(term1,term2,l)
-                if(sim > max_sim):
-                    max_sim = sim
-                    best_label = l
-            print(term1,term2,best_label)
-            new_values = [best_label, term1 + ", " + term2]
-            categorized_terms.loc[row] = new_values
-            row+=1
-            uncategorized_terms.remove(term2)
+                sim_label = get_term_with_label_similarity(term1,term2,l)
+                if(sim_label > 0.5):
+                    # max_similarity = sim_label
+                    la = l
+                    print(term1,term2,la,sim_label,len(uncategorized_terms),"left.")
+                    categorized_terms.loc[row] = [la,term1]
+                    categorized_terms.loc[row+1] = [la,term2]
+                    row+=2
+                    # categorized_terms = categorized_terms.append([la,term2])
+                    # add_terms_to_label(term1,term2,la,categorized_data)
+                    # uncategorized_terms.remove(term1)
+                    uncategorized_terms.remove(term2)
+                    break
+            if( la == ""):
+                continue
             break
+        if(i == (len(uncategorized_terms)-1)):
+            print("For term:",term1,"cannot find a matched term/label!")
+            categorized_terms.loc[row] = ["Uncategorized", term1]
+            row+=1
 
 print(len(categorized_terms),categorized_terms)
-categorized_terms.to_csv("candidate_df/categorized_terms_from_scratch.csv", sep=',', index=False)
-
-
-
-
-
+categorized_terms.to_csv("Processing/categorized_terms_from_scratch.csv", sep=',', index=False)

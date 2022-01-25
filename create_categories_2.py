@@ -4,8 +4,8 @@ import fasttext
 import tensorflow as tf
 
 ft = fasttext.load_model('D:\cc.de.300.bin')
-model_binary = tf.keras.models.load_model('model_binary',compile = True)
-model_binary_with_labels = tf.keras.models.load_model('model_binary_with_labels',compile = True)
+model_binary = tf.keras.models.load_model('Processing/model_binary',compile = True)
+model_binary_with_labels = tf.keras.models.load_model('Processing/model_binary_with_labels',compile = True)
 
 def get_term_similarity(term1,term2):
     term1 = ft.get_word_vector(term1)
@@ -48,14 +48,13 @@ def add_terms_to_label(term1,term2,label,df):
     df.at[ind, 'words'] = terms
     return
 
-
-with open('candidate_df/candidate_df_with_scores.csv', newline='') as csvfile:
-    df = pd.read_csv("candidate_df/candidate_df_with_scores.csv")
+with open('Processing/candidate_df_processing_with_scores.csv', newline='') as csvfile:
+    df = pd.read_csv("Processing/candidate_df_processing_with_scores.csv")
 
 treshold = 0.6
 data = df[df['scores'] < treshold]
 labels = df['labels']
-categorized_data = df[df['scores'] >= treshold]
+# categorized_data = df[df['scores'] >= treshold]
 
 uncategorized_terms = []
 for word in data['words']:
@@ -64,37 +63,40 @@ for word in data['words']:
         uncategorized_terms.append(terms[i])
 uncategorized_terms = list(dict.fromkeys(uncategorized_terms))
 
-categorized_terms = pd.DataFrame(columns=['labels','word'])
-la = ''
+categorized_terms = pd.DataFrame(columns=['labels','words'])
+la = ""
 row = 0
 while(len(uncategorized_terms) > 1):
-    term1 = uncategorized_terms[0]
-    for i in range(len(uncategorized_terms)-1):
-        term2 = uncategorized_terms[i+1]
+    term1 = uncategorized_terms.pop(0)
+    for i in range(len(uncategorized_terms)):
+        term2 = uncategorized_terms[i]
         result = get_term_similarity(term1,term2)
         if((result > 0.5)  and (term1 != term2)):
-            max_similarity = 0.5
+            # max_similarity = 0.5
+            la = ""
             for l in labels:
                 sim_label = get_term_with_label_similarity(term1,term2,l)
-                if(sim_label > max_similarity):
-                    max_similarity = sim_label
+                if(sim_label > 0.5):
+                    # max_similarity = sim_label
                     la = l
-            print(term1,term2,la,max_similarity,len(uncategorized_terms),"left.")
-            categorized_terms.loc[row] = [la,term1]
-            categorized_terms.loc[row+1] = [la,term2]
-            row+=2
-            # categorized_terms = categorized_terms.append([la,term2])
-            # add_terms_to_label(term1,term2,la,categorized_data)
-            uncategorized_terms.remove(term1)
-            uncategorized_terms.remove(term2)
+                    print(term1,term2,la,sim_label,len(uncategorized_terms),"left.")
+                    categorized_terms.loc[row] = [la,term1]
+                    categorized_terms.loc[row+1] = [la,term2]
+                    row+=2
+                    # categorized_terms = categorized_terms.append([la,term2])
+                    # add_terms_to_label(term1,term2,la,categorized_data)
+                    # uncategorized_terms.remove(term1)
+                    uncategorized_terms.remove(term2)
+                    break
+            if( la == ""):
+                continue
             break
-        if(i == (len(uncategorized_terms)-2)):
-            print("For term:",term1,"cannot find a matched label!")
+        if(i == (len(uncategorized_terms)-1)):
+            print("For term:",term1,"cannot find a matched term/label!")
             categorized_terms.loc[row] = ["-", term1]
             row+=1
-            # categorized_terms = categorized_terms.append(["-",term1])
-            uncategorized_terms.remove(term1)
-            break
+    # break
+    # categorized_terms = categorized_terms.append(["-",term1])
+    # uncategorized_terms.remove(term1)
 
-
-categorized_terms.to_csv("candidate_df/categorized_terms.csv", sep=',', index=False)
+categorized_terms.to_csv("Processing/categorized_terms.csv", sep=',', index=False)

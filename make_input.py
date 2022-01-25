@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import random
 
-path = 'Databases/candidate_df_databases.csv'
+path = 'Processing/candidate_df_processing.csv'
 
 with open(path, newline='') as csvfile:
     df = pd.read_csv(path)
@@ -39,7 +39,7 @@ for word in df['words']:
     print("Making positives - line: ", line,"/",len(data))
     terms = word.split(", ")
     for i in range(len(terms)-1):
-        if (i > 10):
+        if (i > 9):
             break
         for j in range(i+1, len(terms)):
             positives.loc[row] = [terms[i], terms[j], 1]
@@ -66,4 +66,4 @@ print( "Negatives: ", len(negatives), "Positives: ",  len(positives), "are gener
 frames = [positives, negatives]
 result = pd.concat(frames)
 
-result.to_csv("Databases/input_term_term.csv", sep=',', index=False)
+result.to_csv("Processing/input_term_term.csv", sep=',', index=False)

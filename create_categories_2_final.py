@@ -1,16 +1,16 @@
 import pandas as pd
 import numpy as np
-import  fasttext
+import fasttext
 import tensorflow as tf
 
-with open('candidate_df/categorized_terms.csv', newline='') as csvfile:
-    testdf = pd.read_csv("candidate_df/categorized_terms.csv")
+with open('Processing/categorized_terms.csv', newline='') as csvfile:
+    testdf = pd.read_csv("Processing/categorized_terms.csv")
 
-with open('candidate_df/candidate_df_with_scores.csv', newline='') as csvfile:
-    df = pd.read_csv("candidate_df/candidate_df_with_scores.csv")
+with open('Processing/candidate_df_processing_with_scores.csv', newline='') as csvfile:
+    df = pd.read_csv("Processing/candidate_df_processing_with_scores.csv")
 
 ft = fasttext.load_model('D:\cc.de.300.bin')
-model_binary = tf.keras.models.load_model('model_binary',compile = True)
+model_binary = tf.keras.models.load_model('Processing/model_binary',compile = True)
 
 def get_term_similarity(term1,term2):
     term1 = ft.get_word_vector(term1)
@@ -47,9 +47,8 @@ def find_label_for_term(term,data):
 treshold = 0.6
 df = df[df['scores'] >= treshold]
 
-
 for i in range(len(testdf)):
-    term = testdf.loc[i]['word']
+    term = testdf.loc[i]['words']
     label = testdf.loc[i]['labels']
     print(term, "and", label, ":")
     if( label == '-'):
@@ -59,4 +58,4 @@ for i in range(len(testdf)):
     ind = old_words.index
     df.at[ind, 'words'] = df[df['labels'] == label]['words'] + ", " + term
 
-df.to_csv("candidate_df/categorized_terms_final.csv", sep=',', index=False)
+df.to_csv("Processing/categorized_terms_final.csv", sep=',', index=False)
