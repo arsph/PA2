@@ -1,0 +1,85 @@
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+2022-01-25 18:28:08.294697: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Arbeitsleistung Regelleistung Geschwindigkeit 0.97398686 136 left.
+Leistung Schule Geschwindigkeit 0.8832269 134 left.
+Dienstgeschäft Haustürgeschäft Geschwindigkeit 0.8767979 132 left.
+Erziehungsarbeit Arbeit Geschwindigkeit 0.7505158 130 left.
+Beschreibung Lernen Geschwindigkeit 0.9912826 128 left.
+Kennenlernen Organisation Wissenschaft 0.8173934 126 left.
+Trampertreffen Verbreitung Umgang 0.996088 124 left.
+Treffen Arbeitgeber Aufbau 0.59429276 122 left.
+For term: Transportmittel cannot find a matched term/label!
+Ziel Familie Gestalt 0.6520598 119 left.
+Eisenbahn Abenteuer Aufbau 0.86876345 117 left.
+Information Stelle Form 0.69513106 115 left.
+Studie Soldat Ziffer 0.9782206 113 left.
+For term: Erledigung cannot find a matched term/label!
+Unterweisung Wohnung Gestalt 0.6403111 110 left.
+For term: Durchführung cannot find a matched term/label!
+For term: Bahn cannot find a matched term/label!
+For term: Richtung cannot find a matched term/label!
+Fahrt Wagenklasse Geschwindigkeit 0.99984825 105 left.
+Beförderungsklasse Klasse Geschwindigkeit 0.99950325 103 left.
+Fahrtzweck Erziehungszweck Geschwindigkeit 0.9996879 101 left.
+Zweck Reiseform Geschwindigkeit 0.9989691 99 left.
+Wiki-form Form Geschwindigkeit 0.999291 97 left.
+Dienst Sicherheit Geschwindigkeit 0.7155991 95 left.
+Tätigkeit Science-fiction-roman Geschwindigkeit 0.8931167 93 left.
+Schild Roman Ausdruck 0.5539948 91 left.
+Dienstgang Unterrichtsgang Richtlinie 0.62484306 89 left.
+Grund Arbeitsanweisung Schrift 0.6055 87 left.
+Dienstanweisung Welt Gestalt 0.80620867 85 left.
+For term: Vorschuss cannot find a matched term/label!
+Reiseart Gastfamilie Phase 0.6585119 82 left.
+Art Land Schrift 0.53049415 80 left.
+Deutschland Bezug Gestalt 0.94811976 78 left.
+For term: Teil cannot find a matched term/label!
+Europa Mensch Gestalt 0.77069175 75 left.
+Privatwirtschaft Betrieb Wissenschaft 0.7732944 73 left.
+Regelung Bestandteil Ziffer 0.79940724 71 left.
+For term: Schiff cannot find a matched term/label!
+Kontinent Frau Gestalt 0.8856275 68 left.
+For term: Österreich cannot find a matched term/label!
+Schweiz Band Folge 0.8954528 65 left.
+Verb Tag Folge 0.8683715 63 left.
+Geschichte Berg Geschwindigkeit 0.63931423 61 left.
+For term: Gesellschaft cannot find a matched term/label!
+For term: AVerfahren and - :
+ matched term/label!
+For term: Gruppe cannot find a matched term/label!
+Schulbus Reiseverkehrsmittel Geschwindigkeit 0.53394026 56 left.
+For term: Auto cannot find a matched term/label!
+Autofahrer Kraftfahrzeug Bezug 0.5970124 53 left.
+Hauptmotivation Prestigemotivation Geschwindigkeit 0.98726416 51 left.
+Motivation Bedeutung Ausdruck 0.9124948 49 left.
+Schulfahrt Schülerfahrt Geschwindigkeit 0.9861394 47 left.
+Studienfahrt Frauenfahrt Geschwindigkeit 0.9979695 45 left.
+Klassenfahrt Mitreisen Phase 0.93740046 43 left.
+For term: Reisesicherheit cannot find a matched term/label!
+Reiseführer Auswärtstätigkeit Ausdruck 0.97609156 40 left.
+For term: Interesse cannot find a matched term/label!
+Hochkulturschema Rechtsbegriff Software 0.76245856 37 left.
+Trivialschema Literatur Ziffer 0.91564417 35 left.
+Tramper-bewegung Dienstreise Aufbau 0.9726019 33 left.
+For term: Hippie-bewegung cannot find a matched term/label!
+Wandererlass Richter Ziffer 0.9325414 30 left.
+Fahrtenerlass Schülersammelliste Ausdruck 0.9959078 28 left.
+For term: Wohlfahrtsverband cannot find a matched term/label!
+Caritasverband Schülerliste Ausdruck 0.64777416 25 left.
+For term: Unternehmen cannot find a matched term/label!
+For term: Bestimmung cannot find a matched term/label!
+Schulreise Abi-reise Geschwindigkeit 0.588918 21 left.
+Matura-reise Schulausflug Phase 0.97034776 19 left.
+For term: Austauschreise cannot find a matched term/label!
+Reise Forschungsweltreise Geschwindigkeit 0.6969644 16 left.
+Weltreise Fernflug Phase 0.86639655 14 left.
+Flug Reisen Phase 0.7389096 12 left.
+For term: Auslandreisen cannot find a matched term/label!
+For term: Geschäftsreise cannot find a matched term/label!
+For term: Schulwanderung cannot find a matched term/label!
+For term: Bundesland cannot find a matched term/label!
+Reisegrund Jahrhundert Gestalt 0.8779932 6 left.
+For term: Englisch cannot find a matched term/label!
+Fahrtkosten Kosten Aufbau 0.9733907 3 left.
+For term: Übernachtungskosten cannot find a matched term/label!

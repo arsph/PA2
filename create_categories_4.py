@@ -1,7 +1,7 @@
 import pandas as pd
 
-with open('Processing/categorized_terms_from_scratch.csv', newline='') as csvfile:
-    df = pd.read_csv("Processing/categorized_terms_from_scratch.csv")
+with open('Softwaredev/categorized_terms_from_scratch.csv', newline='') as csvfile:
+    df = pd.read_csv("Softwaredev/categorized_terms_from_scratch.csv")
 
 
 for i in range(len(df)-1):
@@ -13,4 +13,4 @@ for i in range(len(df)-1):
 
 df = df[df['words'] != ""]
 
-df.to_csv("Processing/categorized_terms_from_scratch.csv", index=False)
+df.to_csv("Softwaredev/categorized_terms_from_scratch.csv", index=False)

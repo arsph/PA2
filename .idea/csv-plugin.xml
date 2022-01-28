@@ -66,13 +66,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\Processing\categorized_terms_2.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\Processing\categorized_terms_final.csv">
           <value>
             <Attribute>
@@ -94,6 +87,41 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\Softwaredev\candidate_df_sortwaredev.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Softwaredev\categorized_terms.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Softwaredev\categorized_terms_final.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Softwaredev\categorized_terms_from_scratch.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Softwaredev\input_terms_with_labels.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\candidate_df\candidate_df.csv">
           <value>
             <Attribute>
@@ -102,6 +130,13 @@
           </value>
         </entry>
         <entry key="\candidate_df\candidate_df_databases.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\candidate_df\candidate_df_travel.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -136,7 +171,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\candidate_df\categorized_terms_from_scratch_2.csv">
+        <entry key="\candidate_df\categorized_terms_from_scratch.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

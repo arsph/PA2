@@ -4,8 +4,8 @@ import fasttext
 import tensorflow as tf
 
 ft = fasttext.load_model('D:\cc.de.300.bin')
-model_binary = tf.keras.models.load_model('Processing/model_binary',compile = True)
-model_binary_with_labels = tf.keras.models.load_model('Processing/model_binary_with_labels',compile = True)
+model_binary = tf.keras.models.load_model('Softwaredev/model_binary',compile = True)
+model_binary_with_labels = tf.keras.models.load_model('Softwaredev/model_binary_with_labels',compile = True)
 
 def get_term_similarity(term1,term2):
     term1 = ft.get_word_vector(term1)
@@ -38,8 +38,8 @@ def get_term_with_label_similarity(term1,term2,l):
     result = result[0, 0]
     return result
 
-with open('Processing/candidate_df_processing_with_scores.csv', newline='') as csvfile:
-    df = pd.read_csv("Processing/candidate_df_processing_with_scores.csv")
+with open('Softwaredev/candidate_df_sortwaredev_with_scores.csv', newline='') as csvfile:
+    df = pd.read_csv("Softwaredev/candidate_df_sortwaredev_with_scores.csv")
 
 labels = df['labels']
 
@@ -85,4 +85,4 @@ while(len(uncategorized_terms) > 1):
             row+=1
 
 print(len(categorized_terms),categorized_terms)
-categorized_terms.to_csv("Processing/categorized_terms_from_scratch.csv", sep=',', index=False)
+categorized_terms.to_csv("Softwaredev/categorized_terms_from_scratch.csv", sep=',', index=False)

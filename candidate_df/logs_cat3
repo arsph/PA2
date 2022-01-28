@@ -1,0 +1,152 @@
+Warning : `load_model` does not return WordVectorModel or SupervisedModel any more, but a `FastText` object which is very similar.
+2022-01-25 21:33:06.931643: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Schulfahrt Schülerfahrt Geschwindigkeit 0.9861394 243 left.
+Studienfahrt Frauenfahrt Geschwindigkeit 0.9979695 241 left.
+Fahrt Fahrtzweck Geschwindigkeit 0.9999313 239 left.
+Erziehungszweck Zweck Geschwindigkeit 0.9978653 237 left.
+Arbeitsort Ort Geschwindigkeit 0.99211836 235 left.
+Arbeit Betriebsausgabe Geschwindigkeit 0.9674853 233 left.
+Ausgabe Aufenthalt Ausdruck 0.94292504 231 left.
+Betrieb Gefährdungsbeurteilung Gestalt 0.6110891 229 left.
+For term: Arbeitsstätte cannot find a matched term/label!
+Schulprogramm Programm Geschwindigkeit 0.7313212 226 left.
+Fahrtenprogramm Außendienst Geschwindigkeit 0.54024297 224 left.
+Dienst Ziel Software 0.6921352 222 left.
+Wagenklasse Beförderungsklasse Geschwindigkeit 0.99921405 220 left.
+Klasse Schulbusschild Geschwindigkeit 0.98414624 218 left.
+Schild Art Software 0.5172668 216 left.
+Familie Land Schrift 0.53917927 214 left.
+Jahrhundert Mensch Ziffer 0.9357892 212 left.
+Weltreiseführer Reiseführer Ausdruck 0.8016859 210 left.
+Beurteilung Information Gestalt 0.89732504 208 left.
+Richter Welt Gestalt 0.73831487 206 left.
+Reiseform Wiki-form Geschwindigkeit 0.999485 204 left.
+Form Bedeutung Geschwindigkeit 0.8489853 202 left.
+Eisenbahn Abenteuer Aufbau 0.86876345 200 left.
+Unternehmen Unterweisung Abbildung 0.5761894 198 left.
+Bundesreisekostengesetz Einkommensteuergesetz Geschwindigkeit 0.966475 196 left.
+Arbeitsgesetz Dienstgang Ausdruck 0.84284985 194 left.
+Unterrichtsgang Schülersammelliste Ausdruck 0.91326934 192 left.
+Schülerliste Staat Geschwindigkeit 0.96321166 190 left.
+Verb Bahn Güte 0.60553676 188 left.
+Dienstreiseverkehr Freizeitverkehr Geschwindigkeit 0.9953266 186 left.
+Linienverkehr Reiseverkehr Geschwindigkeit 0.9949964 184 left.
+Reise Klassenfahrt Fahrt 0.8430966 182 left.
+Flug Reisen Phase 0.7389096 180 left.
+Tramper-bewegung Leistung Geschwindigkeit 0.9246781 178 left.
+Hippie-bewegung Lernen Fahrt 0.5612332 176 left.
+Unterhaltungsbetrieb Dienstreise Ausdruck 0.7581979 174 left.
+Transitstaat Nicht-schengen-staat Geschwindigkeit 0.99998146 172 left.
+Wohnsitzstaat Arbeitsleistung Geschwindigkeit 0.99417055 170 left.
+Regelleistung Arbeitspflicht Geschwindigkeit 0.9476956 168 left.
+Pflicht Erziehungsarbeit Geschwindigkeit 0.50745344 166 left.
+Kennenlernen Rahmen Wissenschaft 0.56276053 164 left.
+Straßenverbindung Verbindung Ausdruck 0.9384161 162 left.
+Deutschland Rechtsbegriff Gestalt 0.92543644 160 left.
+For term: Österreich cannot find a matched term/label!
+Schweiz Tag Phase 0.7774816 157 left.
+Weblink Stelle Ziffer 0.9933224 155 left.
+For term: Erledigung cannot find a matched term/label!
+Science-fiction-roman Roman Ausdruck 0.7747488 152 left.
+Hochkulturschema Zahl Gestalt 0.9056118 150 left.
+Trivialschema Begriff Software 0.8802458 148 left.
+For term: Kraftfahrzeug cannot find a matched term/label!
+Geschichte Berg Geschwindigkeit 0.63931423 145 left.
+Schulwanderung Bezug Bezug 0.5454158 143 left.
+Schulbus Auto Schrift 0.6501537 141 left.
+Autofahrer Gruppe Folge 0.779496 139 left.
+Wohlfahrtsverband Haustürgeschäft Ausdruck 0.6781454 137 left.
+Caritasverband Schule Ausdruck 0.9697423 135 left.
+Vorphase Anfangphase Geschwindigkeit 0.9046509 133 left.
+Hochphase Grund Geschwindigkeit 0.6399518 131 left.
+Gesellschaft Frau Ziffer 0.9731548 129 left.
+For term: Milliarde cannot find a matched term/label!
+For term: Million cannot find a matched term/label!
+Arbeitszeit Regelarbeitszeit Geschwindigkeit 0.9602102 125 left.
+Sicherheitsregel Bundesland Gestalt 0.8127426 123 left.
+Reisegrund Teil Ziffer 0.7360856 121 left.
+Inselsberg Arbeitgeber Wissenschaft 0.59421766 119 left.
+Dienstgeschäft Schiff Folge 0.5956854 117 left.
+Schulreise Abi-reise Geschwindigkeit 0.588918 115 left.
+Matura-reise Fernflug Phase 0.7127814 113 left.
+Austauschreise Reiseart Ausdruck 0.6432417 111 left.
+Weltreise Mitreisen Phase 0.96172714 109 left.
+Auslandreisen Band Folge 0.9498365 107 left.
+Geschäftsreise Mitnahme Umgang 0.94254535 105 left.
+Hauptmotivation Prestigemotivation Geschwindigkeit 0.98726416 103 left.
+Motivation Arbeitsanweisung Geschwindigkeit 0.69018096 101 left.
+Dienstanweisung Bestandteil Ziffer 0.56838083 99 left.
+For term: Bestimmung cannot find a matched term/label!
+For term: Richtung cannot find a matched term/label!
+Austauschjahr Wegzeit Fahrt 0.8309895 95 left.
+Jahr Zeit Geschwindigkeit 0.9930358 93 left.
+Woche Monat Phase 0.89774364 91 left.
+For term: Gastfamilie cannot find a matched term/label!
+For term: Soldat cannot find a matched term/label!
+Landschulwoche August Folge 0.87235105 87 left.
+Privatwirtschaft Treffen Wissenschaft 0.619527 85 left.
+Forschungsweltreise Musterschule Geschwindigkeit 0.87058127 83 left.
+Schulausflug Asien Phase 0.79746884 81 left.
+Verein Schulverein Ausdruck 0.786124 79 left.
+For term: Vorschuss cannot find a matched term/label!
+Wohnung Kraftfahrer Ziffer 0.97401166 76 left.
+Mitfahren Abgefahren Geschwindigkeit 0.99467146 74 left.
+Fahren Auswärtstätigkeit Geschwindigkeit 0.99247265 72 left.
+Tätigkeit Mediumeninteresse Ausdruck 0.9225739 70 left.
+For term: Interesse cannot find a matched term/label!
+Regelung Verbreitung Umgang 0.99827516 67 left.
+For term: Durchführung cannot find a matched term/label!
+Europa Thema Schrift 0.5527593 64 left.
+For term: Kontinent cannot find a matched term/label!
+Strandaufenthalt Zeitaufwand Aufbau 0.78154963 61 left.
+Reiseverkehrsmittel Verkehrsmittel Geschwindigkeit 0.76066023 59 left.
+Einsatzorganisation Organisation Ausdruck 0.7940954 57 left.
+For term: Transportmittel cannot find a matched term/label!
+For term: Reiseziel cannot find a matched term/label!
+Dienststelle Fahrer Gestalt 0.8690637 53 left.
+Übernachtung Trampertreffen Ausdruck 0.6813357 51 left.
+Einzelbeschreibung Aufwand Aufbau 0.8343855 49 left.
+Beschreibung Möglichkeit Geschwindigkeit 0.8703617 47 left.
+Sicherheit Studie Schrift 0.5178 45 left.
+Fahrtkosten Kosten Aufbau 0.9733907 43 left.
+Übernachtungskosten Personenverkehrsaufwand Geschwindigkeit 0.8195282 41 left.
+Werbungskosten Dauer Geschwindigkeit 0.75527024 39 left.
+For term: Reisekosten cannot find a matched term/label!
+Dienststätte Literatur Folge 0.8694395 36 left.
+For term: Betriebsstätte cannot find a matched term/label!
+Wandererlass Generation Bezug 0.79471636 33 left.
+Fahrtenerlass Bürger Wissenschaft 0.54347575 31 left.
+For term: Erholung cannot find a matched term/label!
+Schüler Tramp Ausdruck 0.7540753 28 left.
+Lehrkraft Reisedauer Ausdruck 0.998155 26 left.
+For term: Anhalter cannot find a matched term/label!
+For term: Beginn cannot find a matched term/label!
+For term: Regel cannot find a matched term/label!
+Taggeld Nächtigungsgeld Geschwindigkeit 0.75056875 21 left.
+Kilometergeld Trennungsgeld Geschwindigkeit 0.8421716 19 left.
+For term: Nielsen cannot find a matched term/label!
+Gastschüler Ewr-bürger Ausdruck 0.708893 16 left.
+Geld Passen Geschwindigkeit 0.83158726 14 left.
+For term: Hippie-generation cannot find a matched term/label!
+For term: Reisesicherheit cannot find a matched term/label!
+For term: Verbrechen cannot find a matched term/label!
+Niveaumilieu Selbstverwirklichungsmilieu Geschwindigkeit 0.99558365 9 left.
+Integrationsmilieu Milieu Geschwindigkeit 0.9999628 7 left.
+Trampkultur Kultur Fahrt 0.7316563 5 left.
+Schulveranstaltung Unterrichtsveranstaltung Geschwindigkeit 0.89135325 3 left.
+For term: Weltumrundung cannot find a matched term/label!
+243               labels                     words
+0    Geschwindigkeit                Schulfahrt
+1    Geschwindigkeit              Schülerfahrt
+2    Geschwindigkeit              Studienfahrt
+3    Geschwindigkeit               Frauenfahrt
+4    Geschwindigkeit                     Fahrt
+..               ...                       ...
+238            Fahrt               Trampkultur
+239            Fahrt                    Kultur
+240  Geschwindigkeit        Schulveranstaltung
+241  Geschwindigkeit  Unterrichtsveranstaltung
+242    Uncategorized             Weltumrundung
+
+[243 rows x 2 columns]

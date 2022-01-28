@@ -4,8 +4,8 @@ import fasttext
 import tensorflow as tf
 
 ft = fasttext.load_model('D:\cc.de.300.bin')
-model_binary = tf.keras.models.load_model('Processing/model_binary',compile = True)
-model_binary_with_labels = tf.keras.models.load_model('Processing/model_binary_with_labels',compile = True)
+model_binary = tf.keras.models.load_model('Softwaredev/model_binary',compile = True)
+model_binary_with_labels = tf.keras.models.load_model('Softwaredev/model_binary_with_labels',compile = True)
 
 def get_term_similarity(term1,term2):
     term1 = ft.get_word_vector(term1)
@@ -48,11 +48,11 @@ def add_terms_to_label(term1,term2,label,df):
     df.at[ind, 'words'] = terms
     return
 
-with open('Processing/candidate_df_processing_with_scores.csv', newline='') as csvfile:
-    df = pd.read_csv("Processing/candidate_df_processing_with_scores.csv")
+with open('Softwaredev/candidate_df_sortwaredev_with_scores.csv', newline='') as csvfile:
+    df = pd.read_csv("Softwaredev/candidate_df_sortwaredev_with_scores.csv")
 
-treshold = 0.6
-data = df[df['scores'] < treshold]
+threshold = 0.6
+data = df[df['scores'] < threshold]
 labels = df['labels']
 # categorized_data = df[df['scores'] >= treshold]
 
@@ -99,4 +99,4 @@ while(len(uncategorized_terms) > 1):
     # categorized_terms = categorized_terms.append(["-",term1])
     # uncategorized_terms.remove(term1)
 
-categorized_terms.to_csv("Processing/categorized_terms.csv", sep=',', index=False)
+categorized_terms.to_csv("Softwaredev/categorized_terms.csv", sep=',', index=False)

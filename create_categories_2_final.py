@@ -3,14 +3,14 @@ import numpy as np
 import fasttext
 import tensorflow as tf
 
-with open('Processing/categorized_terms.csv', newline='') as csvfile:
-    testdf = pd.read_csv("Processing/categorized_terms.csv")
+with open('Softwaredev/categorized_terms.csv', newline='') as csvfile:
+    testdf = pd.read_csv("Softwaredev/categorized_terms.csv")
 
-with open('Processing/candidate_df_processing_with_scores.csv', newline='') as csvfile:
-    df = pd.read_csv("Processing/candidate_df_processing_with_scores.csv")
+with open('Softwaredev/candidate_df_sortwaredev_with_scores.csv', newline='') as csvfile:
+    df = pd.read_csv("Softwaredev/candidate_df_sortwaredev_with_scores.csv")
 
 ft = fasttext.load_model('D:\cc.de.300.bin')
-model_binary = tf.keras.models.load_model('Processing/model_binary',compile = True)
+model_binary = tf.keras.models.load_model('Softwaredev/model_binary',compile = True)
 
 def get_term_similarity(term1,term2):
     term1 = ft.get_word_vector(term1)
@@ -58,4 +58,4 @@ for i in range(len(testdf)):
     ind = old_words.index
     df.at[ind, 'words'] = df[df['labels'] == label]['words'] + ", " + term
 
-df.to_csv("Processing/categorized_terms_final.csv", sep=',', index=False)
+df.to_csv("Softwaredev/categorized_terms_final.csv", sep=',', index=False)

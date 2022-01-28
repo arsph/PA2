@@ -11,7 +11,7 @@ warnings.filterwarnings('ignore')
 
 ft = fasttext.load_model('D:\cc.de.300.bin')
 
-path = 'Processing/input_term_term.csv'
+path = 'Softwaredev/input_term_term.csv'
 
 with open(path, newline='') as csvfile:
     df = pd.read_csv(path)
@@ -46,9 +46,9 @@ model = Sequential([
 model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
-model.fit(X_train, y_train, epochs=50, batch_size=32)
+model.fit(X_train, y_train, epochs=50, batch_size=8)
 test_loss, test_acc = model.evaluate(X_test, y_test)
 print('Test accuracy:', test_acc)
 
-model.save("Processing/model_binary")
+model.save("Softwaredev/model_binary")
 model.summary()

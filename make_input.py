@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import random
 
-path = 'Processing/candidate_df_processing.csv'
+path = 'Softwaredev/candidate_df_sortwaredev.csv'
 
 with open(path, newline='') as csvfile:
     df = pd.read_csv(path)
@@ -66,4 +66,4 @@ print( "Negatives: ", len(negatives), "Positives: ",  len(positives), "are gener
 frames = [positives, negatives]
 result = pd.concat(frames)
 
-result.to_csv("Processing/input_term_term.csv", sep=',', index=False)
+result.to_csv("Softwaredev/input_term_term.csv", sep=',', index=False)
