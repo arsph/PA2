@@ -44,8 +44,8 @@ def find_label_for_term(term,data):
 
     return best_match_label
 
-treshold = 0.6
-df = df[df['scores'] >= treshold]
+threshold = 0.6
+df = df[df['scores'] >= threshold]
 
 for i in range(len(testdf)):
     term = testdf.loc[i]['words']
